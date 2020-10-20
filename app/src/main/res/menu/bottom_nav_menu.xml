@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navHome"
+        android:icon="@drawable/ic_nav_home"
+        android:title="@string/text_home" />
+
+    <item
+        android:id="@+id/navPray"
+        android:icon="@drawable/ic_nav_pray"
+        android:title="@string/text_pray" />
+
+    <item
+        android:id="@+id/navQuran"
+        android:icon="@drawable/ic_nav_quran"
+        android:title="@string/text_quran" />
+
+    <item
+        android:id="@+id/navProfile"
+        android:icon="@drawable/ic_nav_profile"
+        android:title="@string/text_profile" />
+
+
+</menu>

@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Prayer Time</string>
+    <string name="text_home">Beranda</string>
+    <string name="text_pray">Shalat</string>
+    <string name="text_quran">Qur\'an</string>
+    <string name="text_profile">Profil</string>
+    <string name="text_prayer_times">Waktu Sholat</string>
+    <string name="text_next_prayer">Next Prayer</string>
+    <string name="symbol_bullet">•</string>
+    <string name="fajr">Shubuh</string>
+    <string name="sunrise">Terbit</string>
+    <string name="dhuhr">Dzuhur</string>
+    <string name="asr">Ashar</string>
+    <string name="maghrib">Maghrib</string>
+    <string name="isha">Isya</string>
+    <string name="msg_permission_denied">Izin ditolak</string>
+    <string name="text_stop">Matikan</string>
+    <string name="msg_error_gps_disable">GPS Anda tidak aktif, silahkan aktifakan GPS untuk menggunakan fitur ini.</string>
+    <string name="text_unknown">Tidak ketahui</string>
+    <string name="text_monday">Senin</string>
+    <string name="text_tuesday">Selasa</string>
+    <string name="text_wednesday">Rabu</string>
+    <string name="text_thursday">Kamis</string>
+    <string name="text_friday">Jum\'at</string>
+    <string name="text_saturday">Sabtu</string>
+    <string name="text_sunday">Minggu</string>
+    <string-array name="title_prayer_time">
+        <item>Imsak</item>
+        <item>Subuh</item>
+        <item>Terbit</item>
+        <item>Dzuhur</item>
+        <item>Ashar</item>
+        <item>Terbenam</item>
+        <item>Maghrib</item>
+        <item>Isya</item>
+    </string-array>
+</resources>

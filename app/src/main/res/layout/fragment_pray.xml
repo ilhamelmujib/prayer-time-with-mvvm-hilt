@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextViewBoldPrimaryLarge"
+                android:layout_marginStart="@dimen/spacing_large"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:text="@string/text_prayer_times" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="-10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewBoldPrimaryMedium"
+                    android:text="@string/symbol_bullet" />
+
+                <TextView
+                    android:id="@+id/tvCurrentLocation"
+                    style="@style/TextViewMediumPrimaryMediumSmall"
+                    android:layout_marginStart="@dimen/spacing_medium"
+                    android:layout_marginEnd="@dimen/spacing_large"
+                    android:text="Jakarta Pusat" />
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_large"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:layout_marginEnd="@dimen/spacing_large"
+                app:cardCornerRadius="@dimen/spacing_middle"
+                app:cardElevation="@dimen/spacing_xmedium">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/png_banner"
+                        app:riv_corner_radius="@dimen/spacing_large" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/spacing_mxlarge"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvCountDownPrayer"
+                            style="@style/TextViewBoldPrimaryMedium"
+                            android:text="14:00:22" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/TextViewLightPrimaryMediumSmall"
+                                android:text="@string/text_next_prayer" />
+
+                            <TextView
+                                android:id="@+id/tvPrayerTime"
+                                style="@style/TextViewMediumPrimaryMediumSmall"
+                                android:layout_marginStart="@dimen/spacing_medium"
+                                android:text="Ashar 14:57" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_large"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_marginEnd="@dimen/spacing_large"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvDateHijri"
+                    style="@style/TextViewMediumPrimarySmall"
+                    android:text="Muharram 1444 H" />
+
+                <TextView
+                    android:id="@+id/tvDateGregorian"
+                    style="@style/TextViewLightPrimarySmall"
+                    android:layout_alignParentEnd="true"
+                    android:text="Oktober 2020" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_middle"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:layout_marginEnd="@dimen/spacing_middle"
+                app:cardCornerRadius="@dimen/spacing_middle"
+                app:cardElevation="@dimen/spacing_xmedium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewRegularPrimarySmall"
+                            android:text="@string/text_monday"
+                            android:maxLength="3"
+                            android:textAlignment="center"
+                            android:padding="@dimen/spacing_middle"
+                            android:layout_weight="1"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewRegularPrimarySmall"
+                            android:text="@string/text_tuesday"
+                            android:maxLength="3"
+                            android:textAlignment="center"
+                            android:padding="@dimen/spacing_middle"
+                            android:layout_weight="1"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewRegularPrimarySmall"
+                            android:text="@string/text_wednesday"
+                            android:maxLength="3"
+                            android:textAlignment="center"
+                            android:padding="@dimen/spacing_middle"
+                            android:layout_weight="1"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewRegularPrimarySmall"
+                            android:text="@string/text_thursday"
+                            android:maxLength="3"
+                            android:textAlignment="center"
+                            android:padding="@dimen/spacing_middle"
+                            android:layout_weight="1"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewRegularPrimarySmall"
+                            android:text="@string/text_friday"
+                            android:maxLength="3"
+                            android:textAlignment="center"
+                            android:padding="@dimen/spacing_middle"
+                            android:layout_weight="1"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewRegularPrimarySmall"
+                            android:text="@string/text_saturday"
+                            android:maxLength="3"
+                            android:textAlignment="center"
+                            android:padding="@dimen/spacing_middle"
+                            android:layout_weight="1"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewRegularPrimarySmall"
+                            android:text="@string/text_sunday"
+                            android:maxLength="3"
+                            android:textAlignment="center"
+                            android:padding="@dimen/spacing_middle"
+                            android:layout_weight="1"/>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvDateTimes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="7"
+                        tools:listitem="@layout/item_date" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPrayerTimes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:clipToPadding="true"
+                android:nestedScrollingEnabled="false"
+                android:paddingStart="@dimen/spacing_middle"
+                android:paddingEnd="@dimen/spacing_middle"
+                android:paddingBottom="@dimen/spacing_mlarge"
+                tools:itemCount="6"
+                tools:listitem="@layout/item_pray" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

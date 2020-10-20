@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Prayer Time</string>
+    <string name="text_home">Home</string>
+    <string name="text_pray">Pray</string>
+    <string name="text_quran">Qur\'an</string>
+    <string name="text_profile">Profile</string>
+    <string name="text_prayer_times">Prayer Times</string>
+    <string name="text_next_prayer">Next Prayer</string>
+    <string name="symbol_bullet">•</string>
+    <string name="fajr">Fajr</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="dhuhr">Dhuhr</string>
+    <string name="asr">Asr</string>
+    <string name="maghrib">Maghrib</string>
+    <string name="isha">Isha</string>
+    <string name="msg_permission_denied">Permission denied</string>
+    <string name="text_stop">Stop</string>
+    <string name="msg_error_gps_disable">Your location settings is set to Off, Please enable location to use this features</string>
+    <string name="text_unknown">Unknown</string>
+    <string name="text_monday">Senin</string>
+    <string name="text_tuesday">Selasa</string>
+    <string name="text_wednesday">Rabu</string>
+    <string name="text_thursday">Kamis</string>
+    <string name="text_friday">Jum\'at</string>
+    <string name="text_saturday">Sabtu</string>
+    <string name="text_sunday">Minggu</string>
+    <string-array name="title_prayer_time">
+        <item>Imsak</item>
+        <item>Fajr</item>
+        <item>Sunrise</item>
+        <item>Dhuhr</item>
+        <item>Asr</item>
+        <item>Sunset</item>
+        <item>Maghrib</item>
+        <item>Isha</item>
+    </string-array>
+</resources>
