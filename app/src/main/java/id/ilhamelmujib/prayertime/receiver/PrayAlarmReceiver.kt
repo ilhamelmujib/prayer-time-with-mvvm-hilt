@@ -329,7 +329,7 @@ class PrayAlarmReceiver : BroadcastReceiver() {
         }
         val notificationBuilder =
             NotificationCompat.Builder(context, key)
-                .setSmallIcon(R.drawable.ic_launcher_foreground)
+                .setSmallIcon(R.mipmap.ic_launcher_round)
                 .setColor(Color.TRANSPARENT)
                 .setAutoCancel(true)
                 .setContentTitle("Memasuki $title dalam $reminder menit ($adzanTime)")

@@ -27,7 +27,7 @@ class PrayAlarmService : Service(), MediaPlayer.OnCompletionListener,
     MediaPlayer.OnPreparedListener, MediaPlayer.OnErrorListener {
 
     companion object {
-        private const val TAG = "msm.AdhanService"
+        private const val TAG = "prayerTime.AdhanService"
         private const val EXTRA_KEY = "extra_key"
         private const val EXTRA_TIME = "extra_time"
         private const val EXTRA_ACTION = "extra_id"
@@ -109,6 +109,7 @@ class PrayAlarmService : Service(), MediaPlayer.OnCompletionListener,
 
     @SuppressLint("RestrictedApi")
     private fun sendNotification(ongoing: Boolean = true) {
+        notificationType = USE_VIBRATE
         val soundUri = if (notificationType == USE_ADHAN) {
             if (key == FAJR)
                 Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://" + packageName + "/" + R.raw.adhan_fajr_trimmed)
@@ -148,13 +149,14 @@ class PrayAlarmService : Service(), MediaPlayer.OnCompletionListener,
         }
 
         val notification = NotificationCompat.Builder(this, key)
-            .setSmallIcon(R.drawable.ic_launcher_foreground)
+            .setSmallIcon(R.mipmap.ic_launcher_round)
             .setColor(Color.TRANSPARENT)
             .setAutoCancel(autoCancel)
             .setOnlyAlertOnce(true)
             .setShowWhen(true)
-            .setContentTitle("Waktunya $title pukul $time")
-            .setContentText(text)
+//            .setContentTitle("Waktunya $title pukul $time")
+            .setContentTitle("Sudah memasuki waktu $title $time")
+            .setContentText("Solat dulu yuk")
             .setContentIntent(resultPendingIntent)
             .setOngoing(!autoCancel)
             .setDefaults(NotificationCompat.DEFAULT_ALL)

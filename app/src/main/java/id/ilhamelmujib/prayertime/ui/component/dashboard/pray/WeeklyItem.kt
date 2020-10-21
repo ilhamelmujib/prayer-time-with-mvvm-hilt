@@ -61,7 +61,7 @@ class WeeklyItem(
     private fun toDate(date: String) : String{
         val format = SimpleDateFormat("EEEE, dd MMMM yyyy", Locale.getDefault())
         val dateFormat: Date = format.parse(date)
-        val fDate = SimpleDateFormat("dd", Locale.getDefault())
+        val fDate = SimpleDateFormat("d", Locale.getDefault())
         val date = fDate.format(dateFormat)
         return date
     }

@@ -31,7 +31,7 @@ fun String?.notNull(): String {
     return this ?: ""
 }
 
-fun generateRandom() = Random().nextInt(9999 - 1000) + 1000
+fun generateRandom() = Random().nextInt(9999 - 1000) + 1100
 
 fun convertLongToTime(time: Long): String {
     val date = Date(time)
