@@ -141,71 +141,78 @@
 
                         <androidx.appcompat.widget.AppCompatTextView
                             style="@style/TextViewRegularPrimarySmall"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:maxLength="3"
+                            android:padding="@dimen/spacing_middle"
                             android:text="@string/text_monday"
-                            android:maxLength="3"
-                            android:textAlignment="center"
-                            android:padding="@dimen/spacing_middle"
-                            android:layout_weight="1"/>
+                            android:textAlignment="center" />
 
                         <androidx.appcompat.widget.AppCompatTextView
                             style="@style/TextViewRegularPrimarySmall"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:maxLength="3"
+                            android:padding="@dimen/spacing_middle"
                             android:text="@string/text_tuesday"
-                            android:maxLength="3"
-                            android:textAlignment="center"
-                            android:padding="@dimen/spacing_middle"
-                            android:layout_weight="1"/>
+                            android:textAlignment="center" />
 
                         <androidx.appcompat.widget.AppCompatTextView
                             style="@style/TextViewRegularPrimarySmall"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:maxLength="3"
+                            android:padding="@dimen/spacing_middle"
                             android:text="@string/text_wednesday"
-                            android:maxLength="3"
-                            android:textAlignment="center"
-                            android:padding="@dimen/spacing_middle"
-                            android:layout_weight="1"/>
+                            android:textAlignment="center" />
 
                         <androidx.appcompat.widget.AppCompatTextView
                             style="@style/TextViewRegularPrimarySmall"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:maxLength="3"
+                            android:padding="@dimen/spacing_middle"
                             android:text="@string/text_thursday"
-                            android:maxLength="3"
-                            android:textAlignment="center"
-                            android:padding="@dimen/spacing_middle"
-                            android:layout_weight="1"/>
+                            android:textAlignment="center" />
 
                         <androidx.appcompat.widget.AppCompatTextView
                             style="@style/TextViewRegularPrimarySmall"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:maxLength="3"
+                            android:padding="@dimen/spacing_middle"
                             android:text="@string/text_friday"
-                            android:maxLength="3"
-                            android:textAlignment="center"
-                            android:padding="@dimen/spacing_middle"
-                            android:layout_weight="1"/>
+                            android:textAlignment="center" />
 
                         <androidx.appcompat.widget.AppCompatTextView
                             style="@style/TextViewRegularPrimarySmall"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:maxLength="3"
+                            android:padding="@dimen/spacing_middle"
                             android:text="@string/text_saturday"
-                            android:maxLength="3"
-                            android:textAlignment="center"
-                            android:padding="@dimen/spacing_middle"
-                            android:layout_weight="1"/>
+                            android:textAlignment="center" />
 
                         <androidx.appcompat.widget.AppCompatTextView
                             style="@style/TextViewRegularPrimarySmall"
-                            android:text="@string/text_sunday"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
                             android:maxLength="3"
-                            android:textAlignment="center"
                             android:padding="@dimen/spacing_middle"
-                            android:layout_weight="1"/>
+                            android:text="@string/text_sunday"
+                            android:textAlignment="center" />
 
                     </LinearLayout>
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rvDateTimes"
+                        android:id="@+id/rvWeeklyCalendar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:nestedScrollingEnabled="false"
                         android:orientation="horizontal"
                         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                         tools:itemCount="7"
-                        tools:listitem="@layout/item_date" />
+                        tools:listitem="@layout/item_weekly" />
 
                 </LinearLayout>
 

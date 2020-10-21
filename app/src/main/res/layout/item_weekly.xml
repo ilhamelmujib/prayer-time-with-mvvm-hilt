@@ -5,8 +5,8 @@
     <data>
 
         <variable
-            name="date"
-            type="id.ilhamelmujib.prayertime.data.model.Week" />
+            name="weekly"
+            type="id.ilhamelmujib.prayertime.data.model.Weekly" />
     </data>
 
     <LinearLayout
@@ -18,24 +18,27 @@
         android:paddingBottom="@dimen/spacing_middle">
 
         <LinearLayout
+            android:id="@+id/linMon"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
 
             <androidx.appcompat.widget.AppCompatTextView
-                style="@style/TextViewRegularPrimarySmall"
-                android:text="@{date.greMon}"
+                android:id="@+id/tvMon"
+                style="@style/TextViewMediumPrimarySmall"
                 tool:text="14" />
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMonHij"
                 style="@style/TextViewLightPrimaryExtraSmall"
-                android:text="@{date.hijMon}"
                 tool:text="1" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linTue"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -43,17 +46,18 @@
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatTextView
-                style="@style/TextViewRegularPrimarySmall"
-                android:text="@{date.greTue}"
+                android:id="@+id/tvTue"
+                style="@style/TextViewMediumPrimarySmall"
                 tool:text="15" />
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTueHij"
                 style="@style/TextViewLightPrimaryExtraSmall"
-                android:text="@{date.hijTue}"
                 tool:text="2" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linWed"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -61,17 +65,18 @@
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatTextView
-                style="@style/TextViewRegularPrimarySmall"
-                android:text="@{date.greWed}"
+                android:id="@+id/tvWed"
+                style="@style/TextViewMediumPrimarySmall"
                 tool:text="16" />
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvWedHij"
                 style="@style/TextViewLightPrimaryExtraSmall"
-                android:text="@{date.hijWed}"
                 tool:text="3" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linThu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -79,17 +84,18 @@
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatTextView
-                style="@style/TextViewRegularPrimarySmall"
-                android:text="@{date.greThu}"
+                android:id="@+id/tvThu"
+                style="@style/TextViewMediumPrimarySmall"
                 tool:text="17" />
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvThuHij"
                 style="@style/TextViewLightPrimaryExtraSmall"
-                android:text="@{date.hijThu}"
                 tool:text="4" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linFri"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -97,17 +103,18 @@
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatTextView
-                style="@style/TextViewRegularPrimarySmall"
-                android:text="@{date.greFri}"
+                android:id="@+id/tvFri"
+                style="@style/TextViewMediumPrimarySmall"
                 tool:text="18" />
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvFriHij"
                 style="@style/TextViewLightPrimaryExtraSmall"
-                android:text="@{date.hijFri}"
                 tool:text="5" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linSat"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -115,17 +122,19 @@
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatTextView
-                style="@style/TextViewRegularPrimarySmall"
-                android:text="@{date.greSat}"
+                android:id="@+id/tvSat"
+                style="@style/TextViewMediumPrimarySmall"
                 tool:text="19" />
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSatHij"
                 style="@style/TextViewLightPrimaryExtraSmall"
-                android:text="@{date.hijSat}"
+                android:text="@{weekly.hijSat}"
                 tool:text="6" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linSun"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -133,13 +142,13 @@
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatTextView
-                style="@style/TextViewRegularPrimarySmall"
-                android:text="@{date.greSun}"
+                android:id="@+id/tvSun"
+                style="@style/TextViewMediumPrimarySmall"
                 tool:text="20" />
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSunHij"
                 style="@style/TextViewLightPrimaryExtraSmall"
-                android:text="@{date.hijSun}"
                 tool:text="7" />
         </LinearLayout>
 

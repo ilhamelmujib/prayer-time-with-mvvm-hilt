@@ -34,4 +34,18 @@
         <item>Maghrib</item>
         <item>Isya</item>
     </string-array>
+    <string-array name="month_hijri">
+        <item>Muharam</item>
+        <item>Safar</item>
+        <item>Rabi\'ul Awal</item>
+        <item>Rabi\'ul Akhir</item>
+        <item>Jumadil Awal</item>
+        <item>Jumadil Akhir</item>
+        <item>Rajab</item>
+        <item>Sya\'ban</item>
+        <item>Ramadhan</item>
+        <item>Syawal</item>
+        <item>Dzulkaidan</item>
+        <item>Dzulhijjah</item>
+    </string-array>
 </resources>

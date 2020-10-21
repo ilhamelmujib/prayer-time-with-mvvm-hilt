@@ -9,11 +9,14 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.PagerSnapHelper
+import androidx.recyclerview.widget.RecyclerView
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
 import dagger.hilt.android.AndroidEntryPoint
 import id.ilhamelmujib.prayertime.R
 import id.ilhamelmujib.prayertime.data.model.Pray
+import id.ilhamelmujib.prayertime.data.model.Weekly
 import id.ilhamelmujib.prayertime.ui.base.BaseFragment
 import id.ilhamelmujib.prayertime.ui.component.DashboardActivity
 import id.ilhamelmujib.prayertime.utils.*
@@ -26,7 +29,8 @@ class PrayFragment : BaseFragment(), LocationProvider.LocationProviderCallback {
     private val viewModel: PrayViewModel by viewModels()
     private lateinit var mLocationProvider: LocationProvider
     private lateinit var location: Location
-    private val mAdapter by lazy { GroupAdapter<ViewHolder>() }
+    private val mAdapterPray by lazy { GroupAdapter<ViewHolder>() }
+    private val mAdapterWeekly by lazy { GroupAdapter<ViewHolder>() }
 
     override val layoutId: Int get() = R.layout.fragment_pray
 
@@ -100,8 +104,9 @@ class PrayFragment : BaseFragment(), LocationProvider.LocationProviderCallback {
                 tvCurrentLocation.text = it
             }
 
+            observe(viewModel.listWeekly, ::initWeeklyCalendar)
             observe(viewModel.listPrayerTime, ::initPray)
-            observe(viewModel.hijriDate) {
+            observe(viewModel.hijriMonth) {
                 tvDateHijri.text = it
             }
         }
@@ -123,11 +128,17 @@ class PrayFragment : BaseFragment(), LocationProvider.LocationProviderCallback {
 
     private fun initView() {
         progressBar.toVisible()
-        tvDateGregorian.text = currentDate("EEEE, dd MMMM yyyy")
+        tvDateGregorian.text = currentDate("MMMM yyyy")
+
+        rvWeeklyCalendar.apply {
+            layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
+            adapter = mAdapterWeekly
+            PagerSnapHelper().attachToRecyclerView(this)
+        }
 
         rvPrayerTimes.apply {
             layoutManager = LinearLayoutManager(requireContext())
-            adapter = mAdapter
+            adapter = mAdapterPray
         }
     }
 
@@ -148,11 +159,28 @@ class PrayFragment : BaseFragment(), LocationProvider.LocationProviderCallback {
         prayFragment = null
     }
 
+    private fun initWeeklyCalendar(list: List<Weekly>) {
+        val listItem = list.map {
+            WeeklyItem(it)
+        }
+        mAdapterWeekly.apply {
+            clear()
+            addAll(listItem)
+        }
+
+        var position = 0
+        list.forEachIndexed { index, weekly ->
+            if (weekly.isSelected) position = index
+        }
+        rvWeeklyCalendar.scrollToPosition(position)
+
+    }
+
     private fun initPray(list: List<Pray>) {
         val listItem = list.map {
             PrayItem(it, viewModel.key)
         }
-        mAdapter.apply {
+        mAdapterPray.apply {
             clear()
             addAll(listItem)
         }

@@ -6,6 +6,7 @@ import android.location.LocationManager
 import android.view.View
 import android.widget.Toast
 import androidx.core.content.getSystemService
+import com.github.msarhan.ummalqura.calendar.UmmalquraCalendar
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
